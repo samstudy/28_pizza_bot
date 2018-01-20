@@ -1,19 +1,33 @@
 # Telegram Bot for Pizzeria
 
-[TODO. There will be project description]
+The main task of this project is create Bot for Pizzeria
 
-# How to Use
+### The service features
+- Catalog is loaded from DB
+- Product is editable from web page for admins
+
+## How to Use
 
 Step 1. Register new telegram bot for development purposes, get the new token. [@BotFather](https://telegram.me/botfather)
 
-Step 2. Launch
+Step 2. Install modules from requirement 
+
+Step 3. Create DB and migrate catalog to DB
+
+Step 4. Launch bot
+
+Step 5. Launch server for web admin
+
+Example of  launch on Linux, Python 3.5:
 
 ```
-#!bash
+pip install -r requirements.txt
+python3 create_db.py
+python3 bot.py
+python3 server.py
 
-$ # the token below is not actual, you need to register a new one
-$ BOT_TOKEN="110831855:AAE_GbIeVAUwk11O12vq4UeMnl20iADUtM" python3 bot.py
 ```
+
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
