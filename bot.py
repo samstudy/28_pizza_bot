@@ -3,7 +3,7 @@ from jinja2 import Template
 from os import getenv
 from create_db import session, Pizza
 
-
+# the token below is not actual, you need to register a new one
 TOKEN = '483199818:AAGmOEkN3QilQ9YgVMkoXsi0IfsIaV0Tn1w'
 if not TOKEN:
     raise Exception('BOT_TOKEN should be specified')
