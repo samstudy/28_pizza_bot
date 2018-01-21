@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session
 from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
-from sqlalchemy.orm import sessionmaker, relationsi
+from sqlalchemy.orm import sessionmaker, relationship
 
 
 engine = create_engine('URI')

@@ -15,8 +15,8 @@ class AuthException():
 
 class MyModelView(ModelView):
     def check_auth(self, username, password):
-        return username == os.getenv('username') and
-        password == os.getenv('password')
+        return username == os.getenv
+        ('username') and password == os.getenv('password')
 
     def is_accessible(self):
         auth = request.authorization
