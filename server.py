@@ -9,7 +9,7 @@ from create_db import URI, Pizza, Option
 class AuthException():
     def __init__(self, message):
         super().__init__(message, Response(
-            "You could not be authenticated. Please refresh the page.", 401,
+            "You could not be authenticated. Please refresh the page.",
             {'WWW-Authenticate': 'Basic realm="Login Required"'}))
 
 
