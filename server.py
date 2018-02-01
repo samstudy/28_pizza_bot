@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.exceptions import HTTPException
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
-from create_db import URI, Pizza, Option
+from models import URI, Pizza, Option
 
 
 class AuthException():
@@ -16,7 +16,7 @@ class AuthException():
 class MyModelView(ModelView):
     def check_auth(self, username, password):
         return username == os.getenv
-        ('username') and password == os.getenv('password')
+        ('USERNAME') and password == os.getenv('USER_PASSWORD')
 
     def is_accessible(self):
         auth = request.authorization
