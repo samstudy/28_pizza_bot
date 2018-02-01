@@ -1,7 +1,9 @@
 import telebot
 from jinja2 import Template
 from os import getenv
-from create_db import session, Pizza
+from models import session, Pizza
+from catalog import catalog
+from sqlalchemy.orm import joinedload
 
 # the token below is not actual, you need to register a new one
 TOKEN = '483199818:AAGmOEkN3QilQ9YgVMkoXsi0IfsIaV0Tn1w'
@@ -24,7 +26,7 @@ def greet(message):
 
 @bot.message_handler(commands=['menu'])
 def show_catalog(message):
-    catalog = session.query(Pizza).all()
+    catalog = session.query(Pizza).options(joinedload('options')).all()
     bot.send_message(message.chat.id, catalog_tmpl.render(
         catalog=catalog), parse_mode='Markdown')
 
