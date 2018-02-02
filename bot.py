@@ -5,8 +5,8 @@ from models import session, Pizza
 from catalog import catalog
 from sqlalchemy.orm import joinedload
 
-# the token below is not actual, you need to register a new one
-TOKEN = '483199818:AAGmOEkN3QilQ9YgVMkoXsi0IfsIaV0Tn1w'
+
+TOKEN = os.environ['BOT_TOKEN']
 if not TOKEN:
     raise Exception('BOT_TOKEN should be specified')
 
