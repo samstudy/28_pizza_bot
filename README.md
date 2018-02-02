@@ -6,6 +6,14 @@ The main task of this project is create Bot for Pizzeria
 - Catalog is loaded from DB
 - Product is editable from web page for admins
 
+### Attention!
+Below parametrs declared as environment variables, don't forget to set up:
+1. **os.environ['BOT_TOKEN']**(set up bot token for  to access the HTTP API)
+2. **os.getenv('USERNAME')**, **os.getenv('USER_PASSWORD')**
+(set up username and password for disable anonymous user)
+3. **os.environ['DATABASE_URL']**(set up the database URI that should be used for the connection)
+
+
 ## How to Use
 
 Step 1. Register new telegram bot for development purposes, get the new token. [@BotFather](https://telegram.me/botfather)
