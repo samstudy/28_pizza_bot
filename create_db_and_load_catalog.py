@@ -1,9 +1,9 @@
 from models import Base, engine, session, Pizza, Option
-from catalog import catalog
+from meals_catalog import meals
 
 
 def insert_into_db(catalog):
-    for meal in catalog:
+    for meal in meals:
         pizza = Pizza(title=meal['title'], description=meal['description'])
         session.add(pizza)
         for choise in meal['choices']:
@@ -15,4 +15,4 @@ def insert_into_db(catalog):
 
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
-    insert_into_db(catalog)
+    insert_into_db(meals)
