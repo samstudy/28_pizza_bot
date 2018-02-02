@@ -1,4 +1,4 @@
-catalog = [
+meals = [
     {
         'title': 'Маргарита',
         'description': 'соус,сыр Моцарелла',
