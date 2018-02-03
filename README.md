@@ -30,7 +30,7 @@ Example of  launch on Linux, Python 3.5:
 
 ```
 pip install -r requirements.txt
-python3 create_db.py
+python3 create_db_and_load_catalog.py meals_catalog.json
 python3 bot.py
 python3 server.py
 
